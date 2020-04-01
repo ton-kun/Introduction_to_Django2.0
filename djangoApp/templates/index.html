@@ -1,0 +1,71 @@
+{% extends "theme.html" %}
+
+{% block title %}test{{ block.super }}{% endblock %}
+{% block head %}
+  {{ block.super }}
+  <style type="text/css">
+    body {
+      background-color: #ababab ;
+    }
+  </style>
+{% endblock %}
+{% block content %}
+  <h1>{{title}}</h1>
+  <p>
+    {{message}}
+  </p>
+{% endblock %}
+{% block footer %}
+{{ block.super }}
+<p>test</p>
+{% endblock %} 
+
+
+
+<!---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+
+    {% autoescape off %}
+    変数展開の際は二重カッコを使用する。djangoの構文を使用するのはパーセント付きを使用
+    <h1>{{ unescaped }}</h1>
+    {% endautoescape %}
+
+    {% if random > 0.6 %}
+      <h1>hoge</h1>
+    {% elif random > 0.3 %}
+      <h1>foo</h1>
+    {% else%}
+      <h1>fuga</h1>
+    {% endif%}
+    <ul>
+      {% for item in l %}
+        <li>{{item}}</li>
+      {% endfor %}
+    </ul>
+
+    <table>
+      <tr>
+        <th></th>
+        <th></th>
+      </tr>
+      {% for item in l %}
+      <tr>
+        <td>{{item.name}}</td><td>{{item.value}}</td>
+      </tr>
+      {% endfor %}
+      </table>
+
+      {# Foo #}
+        <h1>hoge</h1>
+      {# Fuga #}
+      
+      
+
+    </body>
+</html>
+--->
